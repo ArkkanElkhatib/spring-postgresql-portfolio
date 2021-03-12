@@ -50,7 +50,7 @@ public class ProjectConfig {
                             "contact me. Core concepts of HTML, CSS, and JavaScript are also utilized.",
                     "Java, Java Spring, PostgreSQL, Java Mail Sender, Java JPA, Thymeleaf Templating Engine, HTML/CSS/JavaScript",
                     "static/JavaWebsite.png",
-                    "https://github.com/",
+                    "https://github.com/ArkkanElkhatib/spring-postgresql-portfolio",
                     false
             );
 
