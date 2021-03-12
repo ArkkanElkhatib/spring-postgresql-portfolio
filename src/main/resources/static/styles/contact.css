@@ -1,0 +1,91 @@
+.navbar__container {
+    border-bottom: 1px solid var(--main-color);
+    background-color: var(--background-color);
+}
+
+.main__container {
+    height: calc(100vh - var(--nav-height));
+    background-color: var(--background-color);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main__form__container {
+    text-align: center;
+    border: 1px solid var(--main-color);
+    padding: 2rem;
+    width: 40rem;
+}
+
+.main__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+}
+
+.main__form input {
+    font-size: 1.2rem;
+    padding: .3rem;
+    border-radius: 5px;
+    outline: none;
+    width: 20ch;
+    transition: all 0.2s ease-in;
+}
+
+.main__form input:focus {
+    width: 30ch;
+}
+
+.main__email__header {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.form__submit {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: var(--main-color);
+    width: 8ch !important;
+    outline: none;
+    border: 1px solid var(--main-color);
+    transition: all 0.2s ease-in;
+}
+
+.form__submit:hover {
+    color: var(--background-color);
+    background-color: var(--main-color);
+    width: 12ch !important;
+}
+
+.main__personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__personal__header {
+    font-size: 1.2rem;
+}
+
+.main__personal__info {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+textarea {
+    font-size: 1.2rem;
+    padding: 3px;
+    min-width: 30ch;
+    min-height: 5ch;
+    height: 10ch;
+    width: 50ch;
+    max-width: 54ch;
+    max-height: 30ch;
+}

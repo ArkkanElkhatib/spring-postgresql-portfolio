@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Arkkan Portfolio</title>
+        <link href="styles/navbar.css" rel="stylesheet" />
+        <link href="styles/projects.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="navbar__container">
+            <div class="navbar__title__container">
+                <div class="navbar__title">
+                    <h2><a href="/">Arkkan</a></h2>
+                </div>
+            </div>
+            <div class="navbar__links__container">
+                <a href="/projects" class="navbar__links">Projects</a>
+                <a href="/about" class="navbar__links">About Me</a>
+                <a href="/contact" class="navbar__links">Contact</a>
+            </div>
+        </div>
+
+        <div th:each="project: ${projects}" class="main__background__container">
+            <div class="main__background__content">
+                <div class="main__demo" th:style="'background-image: url( ' + ${project.imageLink} + ');'"></div>
+                <div class="main__desc main__text__section">
+                    <div class="main__desc__container">
+                        <u>Description</u>
+                        <p th:text="${project.description}" >
+                        </p>
+                    </div>
+                </div>
+
+                <div class="main__tech main__text__section">
+                    <div class="main__tech__container">
+                        <u>Technologies</u>
+                        <ul class="main__tech__list">
+                            <li th:each="tech: ${project.techList}">
+                                <p th:text="${tech}" ></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a th:href="${project.gitLink}" class="main__tech__git" target="_blank" ></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main__container">
+            <div class="main__header">
+                <h2><u>Projects</u></h2>
+            </div>
+            <div class="main__projects__container">
+                <a href="#" th:each="project: ${projects}"
+                    class="main__project__element"
+                    th:classappend="${project.darkImage} ? dark : bright"
+                    th:style="'background-image: url( ' + ${project.imageLink} + ');'"
+                    th:text="${project.title} ">
+                </a>
+            </div>
+        </div>
+
+        <script src="/scripts/projects.js"></script>
+    </body>
+</html>

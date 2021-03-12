@@ -1,0 +1,145 @@
+.navbar__container {
+    border-bottom: 1px solid var(--main-color);
+    background-color: var(--background-color);
+}
+
+.main__container {
+    height: calc(100vh - var(--nav-height));
+    background-color: var(--background-color);
+    width: 100vw;
+}
+
+.main__header {
+    padding: 4rem 0 1rem 12rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: italic;
+    color: var(--main-color);
+}
+
+.main__projects__container {
+    margin: auto;
+    height: 72vh;
+    width: 85%;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main__project__element {
+    background-image: url("../static/whiteboard.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+    transition: 0.1s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-decoration: none;
+    top: 50px;
+    font-size: 1.8rem;
+    color: transparent;
+    padding-bottom: 2.5rem;
+}
+
+.main__project__element:hover {
+    opacity: .9;
+    transform: scale(1.1);
+}
+
+.dark:hover {
+    color: white;
+}
+
+.bright:hover {
+    color: black;
+}
+
+.main__background__container {
+    position: absolute;
+    display: none;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.main__background__content {
+    background-color: var(--background-color);
+    margin: 10% auto;
+    border: 1px solid black;
+    min-height: 450px;
+    height: 40vh;
+    width: 70%;
+    padding: 1rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 3fr 2fr 2fr;
+    animation: fade-in .8s;
+}
+
+.main__demo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.main__text__section {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.main__text__section p {
+    position: relative;
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.main__tech__list {
+    margin-top: 1rem;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.main__tech {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.main__tech__container {
+    flex: .8;
+}
+
+.main__tech__git {
+    background: url("../static/github.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1rem;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    align-self: center;
+    position: relative;
+    transition: all 0.15s ease-in;
+}
+
+.main__tech__git:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arkkan Portfolio</title>
+        <link href="styles/navbar.css" rel="stylesheet" />
+        <link href="styles/contact.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="navbar__container">
+            <div class="navbar__title__container">
+                <div class="navbar__title">
+                    <h2><a href="/">Arkkan</a></h2>
+                </div>
+            </div>
+            <div class="navbar__links__container">
+                <a href="/projects" class="navbar__links">Projects</a>
+                <a href="/about" class="navbar__links">About Me</a>
+                <a href="/contact" class="navbar__links">Contact</a>
+            </div>
+        </div>
+
+        <div class="main__container">
+            <div class="main__form__container">
+                <div class="main__email__header" >
+                    <h2><u><i>Email Form</i></u></h2>
+                </div>
+                <form method="POST" class="main__form" id="main__form">
+                    <input type="email" name="email" class="form__email" placeholder="Email" required>
+                    <input type="text" name="name" class="form__name" placeholder="Full Name" required>
+                    <input type="text" name="businessName" class="form__business_name" placeholder="Business Name" required>
+                    <input type="tel"  name="phoneNumber" class="form__phone" placeholder="Phone: xxx-xxx-xxxx" required>
+                    <textarea form="main__form" name="description" class="form_desc" placeholder="Message"></textarea>
+                    <input type="submit" class="form__submit" value="Send">
+                </form>
+            </div>
+            <div class="main__personal">
+                <div class="main__personal__header">
+                    <h3><i>Personal Contact Info</i></h3>
+                </div>
+                <div class="main__personal__info">   
+                    <p>Phone: 613-501-1308</p>
+                    <p>Email: arkkanito@gmail.com</p>
+                </div>   
+            </div>
+        </div>
+    </body>
+</html>
