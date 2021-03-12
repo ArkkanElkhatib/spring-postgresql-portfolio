@@ -9,9 +9,11 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import javax.mail.MessagingException;
+import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.io.UnsupportedEncodingException;
 
-@Service
+@Service("mailService")
 public class EmailService implements EmailSender{
 
     private final static Logger LOGGER = LoggerFactory.getLogger(EmailService.class);
@@ -28,16 +30,17 @@ public class EmailService implements EmailSender{
     public void send(String to, String email) {
         try {
             MimeMessage mimeMessage = mailSender.createMimeMessage();
-            MimeMessageHelper helper =
-                    new MimeMessageHelper(mimeMessage, "utf-8");
-            helper.setText(email, true);
-            helper.setTo(to);
+            MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, "utf-8");
             helper.setSubject("Portfolio Email Received");
-            helper.setFrom("arkkanelkhatib@arkkanportfolio.com");
+            helper.setFrom(new InternetAddress("arkkanelkhatib", "arkkanportfolio.com"));;
+            helper.setTo(to);
+            helper.setText(email, true);
             mailSender.send(mimeMessage);
         } catch (MessagingException e) {
-            LOGGER.error("failed to send email", e);
+            e.printStackTrace();
             throw new IllegalStateException("failed to send email");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         }
     }
 }
