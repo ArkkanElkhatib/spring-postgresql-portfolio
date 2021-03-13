@@ -56,7 +56,8 @@
     transition: all 0.2s ease-in;
 }
 
-.form__submit:hover {
+.form__submit:hover,
+.form__submit:focus {
     color: var(--background-color);
     background-color: var(--main-color);
     width: 12ch !important;
